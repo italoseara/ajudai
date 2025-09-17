@@ -53,15 +53,9 @@ function ServiceCard({ name, location, service, rating, reviews, tags }) {
   return (
     <div className="service-card">
       <h2>{name}</h2>
-      <p>
-        <strong>Localização:</strong> {location}
-      </p>
-      <p>
-        <strong>Serviço:</strong> {service}
-      </p>
-      <p>
-        <strong>Avaliação:</strong> {rating} ({reviews} avaliações)
-      </p>
+      <p><strong>Localização:</strong> {location}</p>
+      <p><strong>Serviço:</strong> {service}</p>
+      <p><strong>Avaliação:</strong> {rating} ({reviews} avaliações)</p>
       <div className="tags">
         {tags.map((tag, index) => (
           <span key={index} className="tag">
@@ -75,19 +69,25 @@ function ServiceCard({ name, location, service, rating, reviews, tags }) {
   );
 }
 
+function SearchBar({ search, setSearch }) {
+  return (
+    <input
+      className="search-bar"
+      type="text"
+      placeholder="Buscar serviços..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
+  );
+}
+
 function App() {
   const [search, setSearch] = useState("");
 
   return (
     <div className="App">
       <h1>Serviços Disponíveis</h1>
-      <input
-        className="search-bar"
-        type="text"
-        placeholder="Buscar serviços..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <SearchBar search={search} setSearch={setSearch} />
       <div className="service-list">
         {services
           .filter(
