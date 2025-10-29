@@ -1,3 +1,4 @@
+import React from "react";
 import { TextInput, StyleSheet } from "react-native";
 import g, { colors } from "../styles/global";
 

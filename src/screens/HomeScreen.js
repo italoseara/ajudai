@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet } from "react-native";
 import g, { colors, radius, spacing } from "../styles/global";
@@ -71,7 +72,6 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   hero: {
     borderRadius: radius.lg,
-    padding: spacing.lg,
   },
   heroTitle: {
     fontSize: 22,
