@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { View, Text, ScrollView, ActivityIndicator, StyleSheet } from "react-native";
 import g, { colors, radius, spacing } from "../styles/global";

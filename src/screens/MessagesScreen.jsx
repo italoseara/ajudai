@@ -1,12 +1,11 @@
-import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import g from "../styles/global";
 
-export default function SettingsScreen() {
+export default function MessagesScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Configurações</Text>
-      <Text style={styles.text}>Opções de app serão adicionadas aqui.</Text>
+      <Text style={styles.title}>Mensagens</Text>
+      <Text style={styles.text}>Em breve você poderá trocar mensagens aqui.</Text>
     </View>
   );
 }
